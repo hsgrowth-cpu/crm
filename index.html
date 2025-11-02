@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="pt-br">
+  \1
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="/logo-alt.svg" />
+    <meta name="theme-color" content="#6c5ce7" />
+    <meta name="description" content="HS Growth CRM — Kanban, Relatórios, WhatsApp e Tarefas em um CRM moderno e rápido." />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="HS Growth CRM" />
+    <meta property="og:description" content="Kanban, Relatórios, WhatsApp e Tarefas em um CRM moderno e rápido." />
+    <meta property="og:image" content="/logo-social.svg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="HS Growth CRM" />
+    <meta name="twitter:description" content="Kanban, Relatórios, WhatsApp e Tarefas." />
+    <meta name="twitter:image" content="/logo-social.svg" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HS Growth CRM</title>
+    
+    <style>
+      :root{
+        --bg:#000000; --panel:#0b0b0b; --muted:#232642; --line:#1f1f1f; --text:#ffffff;
+        --brand:#ff6a00; --brand-2:#ff9944; --accent:#22d3ee;
+      }
+      *{ box-sizing: border-box }
+      body { font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial; margin:0; background:var(--bg); color:var(--text); }
+      a{ color:#c9d1ff; text-decoration:none }
+      .layout{ display:flex; min-height:100vh }
+      .sidebar{ width:240px; background:linear-gradient(180deg, #12132a, #0f1016); border-right:1px solid var(--line); padding:18px 14px; position:sticky; top:0; }
+      .logo{ font-weight:800; letter-spacing:.5px; margin-bottom:18px }
+      .nav a{ display:block; padding:10px 12px; border-radius:10px; margin:6px 0; color:#dfe4ff; }
+      .nav a:hover, .nav a.active{ background: linear-gradient(90deg, rgba(108,92,231,.20), rgba(34,211,238,.10)); }
+      header { background:linear-gradient(90deg, var(--brand), var(--brand-2)); padding:14px 20px; font-weight:700 }
+      .container{ padding:20px; max-width:1200px; margin:0 auto; }
+      .card{ background:var(--panel); border:1px solid var(--line); border-radius:14px; padding:16px; margin-bottom:16px; box-shadow: 0 6px 16px rgba(0,0,0,.25) }
+      .row{ display:flex; gap:16px; flex-wrap:wrap; }
+      input, select, button, textarea{ padding:10px 12px; border-radius:10px; border:1px solid var(--line); background:#0f1020; color:var(--text) }
+      button{ background:var(--brand); border:none; cursor:pointer; font-weight:700 }
+      button:hover{ filter:brightness(1.08) }
+      table{ width:100%; border-collapse: collapse; }
+      th, td{ text-align:left; border-bottom:1px solid var(--muted); padding:10px 6px; }
+      .pill{ display:inline-block; padding:4px 10px; border-radius:999px; background:#1a1c33; border:1px solid var(--line); font-size:12px; }
+      .toolbar{ display:flex; gap:10px; align-items:center; flex-wrap:wrap }
+    
+  :root{
+    --bg-light:#f6f7fb; --panel-light:#ffffff; --muted-light:#e7e9f7; --line-light:#d9dcfb; --text-light:#0f1020;
+  }
+</style>
+
+    <link rel="manifest" href="/manifest.json" />
+  <link rel="icon" href="/favicon.png" />
+</head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+    <script>
+  if ('serviceWorker' in navigator) {
+    window.addEventListener('load', ()=>{
+      navigator.serviceWorker.register('/service-worker.js').catch(()=>{})
+    });
+  }
+  </script>
+</body>
+</html>
