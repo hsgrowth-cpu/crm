@@ -1,9 +1,12 @@
-# Backend Dockerfile
-FROM node:20-alpine
+# Frontend Dockerfile
+FROM node:20-alpine as build
 WORKDIR /app
 COPY package.json package-lock.json* ./
-RUN npm install --production
+RUN npm install
 COPY . .
-ENV PORT=4000
-EXPOSE 4000
-CMD ["node", "src/index.js"]
+RUN npm run build
+
+FROM nginx:alpine
+COPY --from=build /app/dist /usr/share/nginx/html
+EXPOSE 80
+CMD ["nginx", "-g", "daemon off;"]
